@@ -1,0 +1,770 @@
+
+.zovia-offers-page {
+  min-height: 100vh;
+  background: #f6f5fa;
+  color: #292638;
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+
+.zovia-offers-page * {
+  box-sizing: border-box;
+}
+
+.zo-topbar {
+  min-height: 76px;
+  padding: 16px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: #fff;
+  border-bottom: 1px solid #eae7f0;
+}
+
+.zo-brand {
+  color: #292638;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 850;
+  letter-spacing: 2px;
+}
+
+.zo-brand > span {
+  color: #8a68c3;
+  margin-left: 3px;
+}
+
+.zo-brand small {
+  display: block;
+  margin-top: 4px;
+  color: #898397;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.zo-back-link {
+  color: #67518c;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 11px 15px;
+  border: 1px solid #e6dff1;
+  border-radius: 10px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.zo-back-link:hover {
+  background: #f0eafa;
+  transform: translateY(-1px);
+}
+
+.zo-content {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 38px 0 48px;
+}
+
+.zo-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.zo-eyebrow,
+.zo-section-label {
+  color: #8063ad;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.zo-heading h1 {
+  margin: 8px 0;
+  color: #292638;
+  font-size: clamp(28px, 4vw, 38px);
+  letter-spacing: -1.2px;
+}
+
+.zo-heading p,
+.zo-panel-heading p {
+  margin: 0;
+  color: #777386;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.zo-heading-icon {
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #7252a2;
+  background: linear-gradient(145deg, #eae1fb, #f8f4ff);
+  border: 1px solid #e1d5f6;
+  border-radius: 19px;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.zo-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.zo-stat-card {
+  min-width: 0;
+  padding: 21px;
+  background: #fff;
+  border: 1px solid #eae7f1;
+  border-radius: 17px;
+  box-shadow: 0 5px 20px rgba(45, 32, 75, 0.035);
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+
+.zo-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(45, 32, 75, 0.08);
+}
+
+.zo-stat-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+  border-radius: 11px;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.zo-stat-icon.purple {
+  background: #eee6fc;
+  color: #7552ad;
+}
+
+.zo-stat-icon.green {
+  background: #e3f5e9;
+  color: #2d8850;
+}
+
+.zo-stat-icon.blue {
+  background: #e5efff;
+  color: #3f6ec0;
+}
+
+.zo-stat-icon.amber {
+  background: #fff0d8;
+  color: #a66c13;
+}
+
+.zo-stat-label {
+  display: block;
+  color: #777386;
+  font-size: 12px;
+}
+
+.zo-stat-card > strong {
+  display: block;
+  margin: 6px 0;
+  color: #292638;
+  font-size: 29px;
+  line-height: 1.3;
+}
+
+.zo-stat-card > small {
+  color: #9993a5;
+  font-size: 10px;
+}
+
+.zo-form-panel,
+.zo-list-panel {
+  margin-bottom: 24px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e9e6f0;
+  border-radius: 19px;
+  box-shadow: 0 6px 24px rgba(45, 32, 75, 0.035);
+}
+
+.zo-panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 25px 28px;
+  border-bottom: 1px solid #f0edf5;
+}
+
+.zo-panel-heading h2 {
+  margin: 7px 0;
+  color: #302b40;
+  font-size: 21px;
+  letter-spacing: -0.4px;
+}
+
+.zo-panel-symbol {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: #f0e9fc;
+  color: #7656a8;
+  border-radius: 13px;
+  font-size: 23px;
+}
+
+.zo-coupon-form {
+  padding: 27px 28px 28px;
+}
+
+.zo-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.zo-field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.zo-field > span {
+  color: #403b50;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.zo-field input,
+.zo-field select {
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+  padding: 0 13px;
+  outline: none;
+  color: #302b40;
+  background: #fff;
+  border: 1px solid #ded9e8;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 13px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.zo-field input:focus,
+.zo-field select:focus,
+.zo-search:focus-within {
+  border-color: #9273c5;
+  box-shadow: 0 0 0 3px rgba(146, 115, 197, 0.13);
+}
+
+.zo-field input::placeholder {
+  color: #a39daf;
+}
+
+.zo-field > small {
+  color: #928c9f;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.zo-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-top: 26px;
+}
+
+.zo-button {
+  min-height: 43px;
+  padding: 0 19px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 750;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.zo-button:hover {
+  transform: translateY(-1px);
+}
+
+.zo-button.primary {
+  color: #fff;
+  background: #7455a8;
+  box-shadow: 0 5px 12px rgba(116, 85, 168, 0.17);
+}
+
+.zo-button.primary:hover {
+  background: #60428f;
+  box-shadow: 0 7px 16px rgba(116, 85, 168, 0.24);
+}
+
+.zo-button.secondary {
+  color: #65547e;
+  background: #fff;
+  border-color: #ddd4ed;
+}
+
+.zo-button.secondary:hover {
+  background: #f6f1fd;
+}
+
+.zo-feedback {
+  margin-top: 20px;
+  padding: 12px 14px;
+  border-radius: 9px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.zo-feedback.error {
+  color: #a12e3c;
+  background: #fff0f1;
+  border: 1px solid #f6d5d9;
+}
+
+.zo-feedback.success {
+  color: #277345;
+  background: #edf9f0;
+  border: 1px solid #d1edd9;
+}
+
+.zo-list-heading {
+  border-bottom: none;
+}
+
+.zo-count-pill {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  color: #70519e;
+  background: #f1eafd;
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.zo-toolbar {
+  display: flex;
+  gap: 12px;
+  padding: 0 28px 22px;
+}
+
+.zo-search {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 13px;
+  border: 1px solid #e1dce9;
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.zo-search > span {
+  color: #8775a4;
+  font-size: 22px;
+}
+
+.zo-search input {
+  width: 100%;
+  min-width: 0;
+  height: 43px;
+  color: #302b40;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 12px;
+}
+
+.zo-status-filter {
+  width: 175px;
+  max-width: 45%;
+  padding: 0 12px;
+  color: #494258;
+  background: #fff;
+  border: 1px solid #e1dce9;
+  border-radius: 10px;
+  outline: 0;
+  font-size: 12px;
+}
+
+.zo-coupon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 28px 25px;
+}
+
+.zo-coupon-card {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  padding: 17px;
+  border: 1px solid #e9e5f0;
+  border-radius: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.zo-coupon-card:hover {
+  border-color: #d2c1eb;
+  box-shadow: 0 8px 21px rgba(45, 32, 75, 0.06);
+  transform: translateY(-2px);
+}
+
+.zo-coupon-ticket {
+  width: 100px;
+  min-height: 91px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #6e4b9e;
+  background: #f1eafd;
+  border: 1px dashed #c8b4e8;
+  border-radius: 11px;
+}
+
+.zo-coupon-ticket > span {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.zo-coupon-ticket > strong {
+  margin: 2px 0;
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.zo-coupon-ticket > small {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.zo-coupon-details {
+  min-width: 0;
+  flex: 1;
+}
+
+.zo-coupon-code-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.zo-coupon-code-row h3 {
+  margin: 0;
+  color: #302b40;
+  font-size: 16px;
+  letter-spacing: 0.6px;
+  overflow-wrap: anywhere;
+}
+
+.zo-status-badge {
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.zo-status-badge.active {
+  color: #247c48;
+  background: #e7f7ec;
+}
+
+.zo-status-badge.inactive {
+  color: #686174;
+  background: #eeecf2;
+}
+
+.zo-status-badge.scheduled {
+  color: #345fa5;
+  background: #eaf1ff;
+}
+
+.zo-status-badge.expired {
+  color: #a13f4a;
+  background: #ffedef;
+}
+
+.zo-coupon-details p {
+  margin: 8px 0 6px;
+  color: #686174;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.zo-coupon-details > small {
+  color: #9690a1;
+  font-size: 10px;
+}
+
+.zo-coupon-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.zo-action-button {
+  min-height: 32px;
+  padding: 0 10px;
+  color: #67518c;
+  background: #fff;
+  border: 1px solid #e1d8ee;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 750;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.zo-action-button:hover {
+  background: #f5f0fc;
+  border-color: #c9b8e5;
+}
+
+.zo-action-button.activate {
+  color: #287849;
+  border-color: #ccebd6;
+}
+
+.zo-action-button.activate:hover {
+  background: #edf9f0;
+}
+
+.zo-action-button.deactivate {
+  color: #8c5c16;
+  border-color: #f0dfc0;
+}
+
+.zo-action-button.deactivate:hover {
+  background: #fff7e9;
+}
+
+.zo-action-button.delete {
+  color: #a13d4b;
+  border-color: #f1d6da;
+}
+
+.zo-action-button.delete:hover {
+  background: #fff0f2;
+}
+
+.zo-empty {
+  padding: 43px 20px;
+  text-align: center;
+}
+
+.zo-empty > span {
+  display: inline-grid;
+  width: 55px;
+  height: 55px;
+  place-items: center;
+  color: #7756a6;
+  background: #f1eafd;
+  border-radius: 17px;
+  font-size: 27px;
+}
+
+.zo-empty h3 {
+  margin: 15px 0 7px;
+  color: #332d44;
+  font-size: 17px;
+}
+
+.zo-empty p {
+  margin: 0 0 18px;
+  color: #837d91;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.zo-list-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 28px;
+  color: #898397;
+  background: #fbfaff;
+  border-top: 1px solid #f0edf5;
+  font-size: 10px;
+}
+
+.zo-note {
+  color: #888295;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (max-width: 950px) {
+  .zo-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .zo-coupon-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .zo-coupon-actions {
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 12px;
+    border-top: 1px solid #f0edf5;
+  }
+}
+
+@media (max-width: 600px) {
+  .zo-topbar {
+    padding: 14px 4%;
+  }
+
+  .zo-brand {
+    font-size: 19px;
+  }
+
+  .zo-brand small {
+    font-size: 8px;
+  }
+
+  .zo-back-link {
+    padding: 9px;
+    font-size: 11px;
+  }
+
+  .zo-content {
+    width: 92%;
+    padding-top: 26px;
+  }
+
+  .zo-heading {
+    align-items: flex-start;
+  }
+
+  .zo-heading-icon {
+    width: 47px;
+    height: 47px;
+    border-radius: 14px;
+    font-size: 25px;
+  }
+
+  .zo-heading p {
+    font-size: 12px;
+  }
+
+  .zo-stats {
+    gap: 10px;
+  }
+
+  .zo-stat-card {
+    padding: 15px;
+  }
+
+  .zo-stat-card > strong {
+    font-size: 25px;
+  }
+
+  .zo-stat-card > small {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+
+  .zo-panel-heading {
+    padding: 20px;
+  }
+
+  .zo-panel-heading h2 {
+    font-size: 18px;
+  }
+
+  .zo-panel-heading p {
+    font-size: 12px;
+  }
+
+  .zo-coupon-form {
+    padding: 22px 20px;
+  }
+
+  .zo-form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .zo-form-actions {
+    justify-content: stretch;
+  }
+
+  .zo-form-actions .zo-button {
+    flex: 1;
+  }
+
+  .zo-toolbar {
+    flex-direction: column;
+    padding: 0 20px 20px;
+  }
+
+  .zo-status-filter {
+    width: 100%;
+    max-width: none;
+    height: 43px;
+  }
+
+  .zo-list-heading {
+    align-items: flex-start;
+  }
+
+  .zo-count-pill {
+    font-size: 10px;
+  }
+
+  .zo-coupon-list {
+    padding: 0 15px 20px;
+  }
+
+  .zo-coupon-card {
+    gap: 13px;
+    padding: 12px;
+  }
+
+  .zo-coupon-ticket {
+    width: 77px;
+    min-height: 80px;
+  }
+
+  .zo-coupon-ticket > strong {
+    font-size: 18px;
+  }
+
+  .zo-coupon-details {
+    flex-basis: calc(100% - 95px);
+  }
+
+  .zo-coupon-actions {
+    gap: 6px;
+  }
+
+  .zo-action-button {
+    padding: 0 8px;
+    font-size: 9px;
+  }
+
+  .zo-list-footer {
+    padding: 13px 15px;
+    font-size: 9px;
+  }
+}

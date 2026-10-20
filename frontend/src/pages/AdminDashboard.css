@@ -1,0 +1,1031 @@
+
+
+/* =========================================
+   ZOVIA ADMIN DASHBOARD
+   Theme: White • Grey • Lavender
+========================================= */
+
+:root {
+  --zadmin-bg: #f5f5f9;
+  --zadmin-white: #ffffff;
+  --zadmin-text: #272536;
+  --zadmin-muted: #858396;
+  --zadmin-border: #eae9f1;
+  --zadmin-purple: #8064b5;
+  --zadmin-purple-dark: #674b9c;
+  --zadmin-lavender: #f0eafb;
+  --zadmin-green: #32866a;
+  --zadmin-green-bg: #e8f6ef;
+  --zadmin-peach: #bd765d;
+  --zadmin-peach-bg: #fff0e9;
+  --zadmin-yellow: #a57a2e;
+  --zadmin-yellow-bg: #fff5dc;
+  --zadmin-red: #c34e62;
+  --zadmin-red-bg: #fff0f2;
+  --zadmin-shadow: 0 8px 28px rgba(48, 39, 78, 0.055);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.zadmin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--zadmin-bg);
+  color: var(--zadmin-text);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+.zadmin-layout a {
+  text-decoration: none;
+}
+
+/* SIDEBAR */
+
+.zadmin-sidebar {
+  width: 248px;
+  min-width: 248px;
+  min-height: 100vh;
+  padding: 28px 17px 20px;
+  display: flex;
+  flex-direction: column;
+  background: var(--zadmin-white);
+  border-right: 1px solid var(--zadmin-border);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 5;
+}
+
+.zadmin-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  width: fit-content;
+  margin: 0 0 38px 10px;
+  color: var(--zadmin-text);
+  font-size: 27px;
+  font-weight: 850;
+  letter-spacing: 2px;
+}
+
+.zadmin-brand span {
+  color: var(--zadmin-purple);
+}
+
+.zadmin-sidebar-caption,
+.zadmin-eyebrow {
+  margin: 0;
+  color: var(--zadmin-muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.zadmin-sidebar-caption {
+  padding: 0 12px;
+  margin-bottom: 13px;
+}
+
+.zadmin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.zadmin-nav-link {
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 13px;
+  border-radius: 12px;
+  color: #666477;
+  font-size: 13px;
+  font-weight: 650;
+  transition: background 0.2s ease, color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.zadmin-nav-link span {
+  display: inline-flex;
+  width: 23px;
+  justify-content: center;
+  color: #88829b;
+  font-size: 19px;
+}
+
+.zadmin-nav-link:hover {
+  background: #f6f2fc;
+  color: var(--zadmin-purple-dark);
+  transform: translateX(2px);
+}
+
+.zadmin-nav-link.active {
+  background: var(--zadmin-lavender);
+  color: var(--zadmin-purple-dark);
+  font-weight: 750;
+}
+
+.zadmin-nav-link.active span {
+  color: var(--zadmin-purple-dark);
+}
+
+.zadmin-sidebar-bottom {
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1px solid var(--zadmin-border);
+}
+
+.zadmin-account {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 5px 4px 17px;
+  min-width: 0;
+}
+
+.zadmin-avatar {
+  width: 39px;
+  height: 39px;
+  min-width: 39px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--zadmin-lavender);
+  color: var(--zadmin-purple-dark);
+  font-weight: 800;
+}
+
+.zadmin-account > div:last-child {
+  min-width: 0;
+}
+
+.zadmin-account strong,
+.zadmin-account small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.zadmin-account strong {
+  color: var(--zadmin-text);
+  font-size: 12px;
+}
+
+.zadmin-account small {
+  margin-top: 5px;
+  color: var(--zadmin-muted);
+  font-size: 10px;
+}
+
+.zadmin-logout {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--zadmin-border);
+  border-radius: 10px;
+  background: #fff;
+  color: #6d687c;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.zadmin-logout:hover {
+  color: var(--zadmin-red);
+  border-color: #f0cbd2;
+  background: var(--zadmin-red-bg);
+}
+
+/* MAIN CONTENT */
+
+.zadmin-main {
+  flex: 1;
+  min-width: 0;
+  padding: 34px clamp(20px, 3vw, 44px) 22px;
+}
+
+.zadmin-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 27px;
+}
+
+.zadmin-header h1 {
+  margin: 9px 0 8px;
+  color: var(--zadmin-text);
+  font-size: clamp(27px, 3vw, 34px);
+  font-weight: 800;
+  letter-spacing: -1.1px;
+}
+
+.zadmin-subtitle {
+  margin: 0;
+  color: var(--zadmin-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.zadmin-role-badge {
+  flex-shrink: 0;
+  padding: 9px 13px;
+  border: 1px solid #e4daf5;
+  border-radius: 9px;
+  background: #f1ebfb;
+  color: var(--zadmin-purple-dark);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+/* SUMMARY CARDS */
+
+.zadmin-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 23px;
+}
+
+.zadmin-stat-card {
+  min-width: 0;
+  padding: 21px 20px;
+  border: 1px solid var(--zadmin-border);
+  border-radius: 17px;
+  background: var(--zadmin-white);
+  box-shadow: var(--zadmin-shadow);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.zadmin-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 13px 30px rgba(48, 39, 78, 0.09);
+}
+
+.zadmin-stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+  color: #777489;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.zadmin-stat-icon,
+.zadmin-action-icon {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.zadmin-stat-icon {
+  width: 39px;
+  height: 39px;
+}
+
+.zadmin-stat-icon.lavender,
+.zadmin-action-icon.lavender {
+  background: var(--zadmin-lavender);
+  color: var(--zadmin-purple-dark);
+}
+
+.zadmin-stat-icon.peach,
+.zadmin-action-icon.peach {
+  background: var(--zadmin-peach-bg);
+  color: var(--zadmin-peach);
+}
+
+.zadmin-stat-icon.yellow,
+.zadmin-action-icon.yellow {
+  background: var(--zadmin-yellow-bg);
+  color: var(--zadmin-yellow);
+}
+
+.zadmin-stat-icon.green,
+.zadmin-action-icon.green {
+  background: var(--zadmin-green-bg);
+  color: var(--zadmin-green);
+}
+
+.zadmin-stat-card > strong {
+  display: block;
+  margin-top: 20px;
+  color: var(--zadmin-text);
+  font-size: clamp(25px, 2.4vw, 32px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  overflow-wrap: anywhere;
+}
+
+.zadmin-stat-card > small {
+  display: block;
+  margin-top: 9px;
+  color: var(--zadmin-muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* ORDERS AND INVENTORY PANELS */
+
+.zadmin-content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.85fr);
+  align-items: stretch;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.zadmin-panel {
+  min-width: 0;
+  padding: 23px;
+  border: 1px solid var(--zadmin-border);
+  border-radius: 17px;
+  background: var(--zadmin-white);
+  box-shadow: var(--zadmin-shadow);
+}
+
+.zadmin-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 21px;
+}
+
+.zadmin-panel-heading h2,
+.zadmin-quick-actions h2 {
+  margin: 7px 0 0;
+  color: var(--zadmin-text);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.zadmin-text-link {
+  flex-shrink: 0;
+  color: var(--zadmin-purple-dark);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.zadmin-text-link:hover {
+  text-decoration: underline;
+}
+
+/* RECENT ORDERS */
+
+.zadmin-order-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.zadmin-order-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0eff5;
+}
+
+.zadmin-order-row:first-child {
+  padding-top: 3px;
+}
+
+.zadmin-order-row:last-child {
+  padding-bottom: 3px;
+  border-bottom: 0;
+}
+
+.zadmin-order-symbol {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  min-width: 39px;
+  border-radius: 12px;
+  background: #f1ebfb;
+  color: var(--zadmin-purple-dark);
+  font-size: 16px;
+  font-weight: 850;
+}
+
+.zadmin-order-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.zadmin-order-info strong,
+.zadmin-order-info small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.zadmin-order-info strong {
+  color: var(--zadmin-text);
+  font-size: 12px;
+}
+
+.zadmin-order-info small {
+  margin-top: 6px;
+  color: var(--zadmin-muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.zadmin-order-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.zadmin-order-right > strong {
+  color: var(--zadmin-text);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.zadmin-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 125px;
+  padding: 5px 8px;
+  border-radius: 7px;
+  background: #f0eef5;
+  color: #716b80;
+  font-size: 9px;
+  font-weight: 750;
+  text-transform: capitalize;
+  overflow-wrap: anywhere;
+}
+
+.zadmin-status.delivered,
+.zadmin-status.completed {
+  background: var(--zadmin-green-bg);
+  color: var(--zadmin-green);
+}
+
+.zadmin-status.cancelled,
+.zadmin-status.failed {
+  background: var(--zadmin-red-bg);
+  color: var(--zadmin-red);
+}
+
+.zadmin-status.shipped,
+.zadmin-status.dispatched,
+.zadmin-status.confirmed {
+  background: var(--zadmin-lavender);
+  color: var(--zadmin-purple-dark);
+}
+
+.zadmin-status.pending,
+.zadmin-status.processing {
+  background: var(--zadmin-yellow-bg);
+  color: var(--zadmin-yellow);
+}
+
+/* EMPTY STATE */
+
+.zadmin-empty {
+  min-height: 235px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.zadmin-empty > span {
+  display: grid;
+  place-items: center;
+  width: 49px;
+  height: 49px;
+  border-radius: 15px;
+  background: var(--zadmin-lavender);
+  color: var(--zadmin-purple-dark);
+  font-size: 23px;
+}
+
+.zadmin-empty h3 {
+  margin: 15px 0 7px;
+  font-size: 14px;
+}
+
+.zadmin-empty p {
+  max-width: 250px;
+  margin: 0;
+  color: var(--zadmin-muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* INVENTORY ALERTS */
+
+.zadmin-alert-count {
+  display: grid;
+  place-items: center;
+  min-width: 31px;
+  height: 31px;
+  padding: 0 8px;
+  border-radius: 10px;
+  background: var(--zadmin-red-bg);
+  color: var(--zadmin-red);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.zadmin-stock-good {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 17px 14px;
+  border: 1px solid #d9eee3;
+  border-radius: 12px;
+  background: #f4fbf7;
+}
+
+.zadmin-stock-good > span {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  min-width: 31px;
+  border-radius: 10px;
+  background: var(--zadmin-green-bg);
+  color: var(--zadmin-green);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.zadmin-stock-good strong {
+  display: block;
+  color: #286e55;
+  font-size: 12px;
+}
+
+.zadmin-stock-good p {
+  margin: 6px 0 0;
+  color: #648878;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.zadmin-low-stock-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.zadmin-low-stock-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0eff5;
+}
+
+.zadmin-low-stock-row:first-child {
+  padding-top: 0;
+}
+
+.zadmin-low-stock-row:last-child {
+  border-bottom: 0;
+}
+
+.zadmin-product-placeholder {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 47px;
+  min-width: 43px;
+  overflow: hidden;
+  border: 1px solid var(--zadmin-border);
+  border-radius: 9px;
+  background: #f7f5fb;
+  color: var(--zadmin-purple);
+}
+
+.zadmin-product-placeholder img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.zadmin-product-placeholder > span {
+  font-size: 19px;
+}
+
+.zadmin-low-stock-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.zadmin-low-stock-info strong {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--zadmin-text);
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.zadmin-low-stock-info small {
+  display: block;
+  margin-top: 5px;
+  color: var(--zadmin-muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.zadmin-stock-number {
+  display: grid;
+  place-items: center;
+  min-width: 34px;
+  height: 30px;
+  padding: 0 7px;
+  border-radius: 9px;
+  background: var(--zadmin-yellow-bg);
+  color: var(--zadmin-yellow);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.zadmin-stock-number.danger {
+  background: var(--zadmin-red-bg);
+  color: var(--zadmin-red);
+}
+
+.zadmin-secondary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 41px;
+  margin-top: 17px;
+  padding: 10px 12px;
+  border: 1px solid #e2d8f3;
+  border-radius: 10px;
+  background: #f7f3fd;
+  color: var(--zadmin-purple-dark);
+  font-size: 11px;
+  font-weight: 750;
+  transition: 0.2s ease;
+}
+
+.zadmin-secondary-btn:hover {
+  border-color: var(--zadmin-purple);
+  background: var(--zadmin-lavender);
+}
+
+/* QUICK ACCESS */
+
+.zadmin-quick-actions {
+  padding: 24px;
+  border: 1px solid var(--zadmin-border);
+  border-radius: 17px;
+  background: var(--zadmin-white);
+  box-shadow: var(--zadmin-shadow);
+}
+
+.zadmin-action-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+  margin-top: 21px;
+}
+
+.zadmin-action-card {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  min-height: 84px;
+  padding: 14px;
+  border: 1px solid var(--zadmin-border);
+  border-radius: 13px;
+  background: #fff;
+  transition: border-color 0.2s ease, background 0.2s ease,
+    transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.zadmin-action-card:hover {
+  transform: translateY(-3px);
+  border-color: #d7c9ed;
+  background: #fcfaff;
+  box-shadow: 0 8px 20px rgba(75, 57, 115, 0.07);
+}
+
+.zadmin-action-icon {
+  width: 39px;
+  height: 39px;
+  min-width: 39px;
+}
+
+.zadmin-action-card > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.zadmin-action-card strong,
+.zadmin-action-card small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.zadmin-action-card strong {
+  color: var(--zadmin-text);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.zadmin-action-card small {
+  margin-top: 5px;
+  color: var(--zadmin-muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.zadmin-action-arrow {
+  align-self: flex-start;
+  color: #9385ae;
+  font-size: 16px;
+}
+
+.zadmin-footer {
+  padding: 22px 2px 0;
+  color: var(--zadmin-muted);
+  font-size: 10px;
+  text-align: center;
+}
+
+.zadmin-footer span {
+  color: var(--zadmin-purple-dark);
+  font-weight: 850;
+  letter-spacing: 1.2px;
+}
+
+/* ACCESS / LOGIN REQUIRED */
+
+.zadmin-access {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, #eee6fb 0, transparent 40%),
+    var(--zadmin-bg);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+.zadmin-access-card {
+  width: min(100%, 410px);
+  padding: 38px;
+  border: 1px solid var(--zadmin-border);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 18px 60px rgba(48, 39, 78, 0.1);
+  text-align: center;
+}
+
+.zadmin-access-card .zadmin-brand {
+  margin: 0 auto 22px;
+}
+
+.zadmin-access-card h1 {
+  margin: 0 0 10px;
+  color: var(--zadmin-text);
+  font-size: 25px;
+}
+
+.zadmin-access-card p {
+  margin: 0 0 23px;
+  color: var(--zadmin-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.zadmin-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  padding: 0 21px;
+  border-radius: 10px;
+  background: var(--zadmin-purple);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 750;
+  transition: background 0.2s ease;
+}
+
+.zadmin-primary-btn:hover {
+  background: var(--zadmin-purple-dark);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .zadmin-sidebar {
+    width: 220px;
+    min-width: 220px;
+  }
+
+  .zadmin-main {
+    padding: 28px 23px 20px;
+  }
+
+  .zadmin-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .zadmin-action-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .zadmin-content-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .zadmin-layout {
+    display: block;
+  }
+
+  .zadmin-sidebar {
+    position: relative;
+    top: auto;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: auto;
+    padding: 17px 15px 13px;
+    border-right: 0;
+    border-bottom: 1px solid var(--zadmin-border);
+  }
+
+  .zadmin-brand {
+    margin: 0 0 17px 3px;
+    font-size: 24px;
+  }
+
+  .zadmin-sidebar-caption {
+    margin-bottom: 9px;
+  }
+
+  .zadmin-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .zadmin-nav-link {
+    min-height: 42px;
+    padding: 0 9px;
+    gap: 7px;
+    font-size: 11px;
+  }
+
+  .zadmin-nav-link span {
+    width: 19px;
+    font-size: 16px;
+  }
+
+  .zadmin-sidebar-bottom {
+    margin-top: 14px;
+    padding-top: 12px;
+  }
+
+  .zadmin-account {
+    padding-bottom: 12px;
+  }
+
+  .zadmin-main {
+    padding: 23px 15px 18px;
+  }
+
+  .zadmin-header {
+    flex-direction: column;
+    gap: 13px;
+    margin-bottom: 20px;
+  }
+
+  .zadmin-header h1 {
+    font-size: 28px;
+  }
+
+  .zadmin-stat-grid {
+    gap: 11px;
+    margin-bottom: 16px;
+  }
+
+  .zadmin-stat-card {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .zadmin-stat-top {
+    align-items: flex-start;
+    font-size: 11px;
+  }
+
+  .zadmin-stat-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  .zadmin-stat-card > strong {
+    margin-top: 15px;
+    font-size: 25px;
+  }
+
+  .zadmin-stat-card > small {
+    font-size: 10px;
+  }
+
+  .zadmin-content-grid {
+    gap: 15px;
+    margin-bottom: 16px;
+  }
+
+  .zadmin-panel,
+  .zadmin-quick-actions {
+    padding: 17px;
+    border-radius: 14px;
+  }
+
+  .zadmin-panel-heading h2,
+  .zadmin-quick-actions h2 {
+    font-size: 16px;
+  }
+
+  .zadmin-text-link {
+    font-size: 10px;
+  }
+
+  .zadmin-action-grid {
+    gap: 9px;
+    margin-top: 16px;
+  }
+
+  .zadmin-action-card {
+    gap: 8px;
+    padding: 10px;
+    min-height: 78px;
+  }
+
+  .zadmin-action-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 16px;
+  }
+
+  .zadmin-action-card strong {
+    font-size: 10px;
+  }
+
+  .zadmin-action-card small {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 380px) {
+  .zadmin-stat-grid,
+  .zadmin-action-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .zadmin-order-row {
+    gap: 8px;
+  }
+
+  .zadmin-order-symbol {
+    width: 33px;
+    height: 33px;
+    min-width: 33px;
+  }
+
+  .zadmin-order-info strong,
+  .zadmin-order-right > strong {
+    font-size: 11px;
+  }
+}

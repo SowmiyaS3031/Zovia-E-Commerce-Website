@@ -1,0 +1,151 @@
+
+.customer-auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 18px;
+  background:
+    radial-gradient(circle at 10% 10%, #e9def1 0, transparent 35%),
+    radial-gradient(circle at 90% 90%, #eadccf 0, transparent 35%),
+    #f8f6f3;
+}
+
+.customer-auth-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 42px;
+  background: #ffffff;
+  border: 1px solid #e9e2e9;
+  border-radius: 22px;
+  box-shadow: 0 22px 65px rgba(48, 34, 52, 0.1);
+}
+
+.customer-auth-logo {
+  display: inline-block;
+  margin-bottom: 35px;
+  color: #302536;
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-decoration: none;
+}
+
+.customer-auth-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #856b91;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.customer-auth-card h1 {
+  margin: 0;
+  color: #302536;
+  font-size: 29px;
+  line-height: 1.3;
+}
+
+.customer-auth-description {
+  margin: 12px 0 27px;
+  color: #6d6470;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.customer-auth-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-auth-card label {
+  margin: 15px 0 8px;
+  color: #342b38;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.customer-auth-card input {
+  width: 100%;
+  min-height: 47px;
+  padding: 12px 14px;
+  color: #302536;
+  background: #fcfbfd;
+  border: 1px solid #ded6e2;
+  border-radius: 9px;
+  outline: none;
+  font: inherit;
+  font-size: 14px;
+}
+
+.customer-auth-card input:focus {
+  border-color: #80628d;
+  box-shadow: 0 0 0 3px rgba(128, 98, 141, 0.12);
+}
+
+.customer-auth-card button {
+  min-height: 49px;
+  margin-top: 25px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #302536, #59435f);
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.customer-auth-card button:hover {
+  transform: translateY(-1px);
+}
+
+.customer-auth-card button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.customer-auth-error {
+  margin: 14px 0 0;
+  color: #b42332;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.customer-auth-switch {
+  margin: 23px 0 0;
+  color: #6d6470;
+  text-align: center;
+  font-size: 13px;
+}
+
+.customer-auth-switch a {
+  color: #654875;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.customer-auth-back {
+  display: block;
+  margin-top: 22px;
+  color: #766c79;
+  text-align: center;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.customer-auth-back:hover,
+.customer-auth-switch a:hover {
+  color: #302536;
+}
+
+@media (max-width: 480px) {
+  .customer-auth-card {
+    padding: 28px 22px;
+  }
+
+  .customer-auth-card h1 {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,256 @@
+/* ADMIN LOGIN CSS TEST */
+
+.admin-login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f5f1eb;
+  color: #29232b;
+  font-family: Arial, sans-serif;
+}
+
+.admin-login-brand {
+  min-height: 100vh;
+  padding: 60px;
+  background: #211d1b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.admin-login-logo {
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 7px;
+}
+
+.admin-brand-eyebrow,
+.login-eyebrow {
+  display: block;
+  margin-bottom: 18px;
+  color: #b18e65;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.admin-brand-content h1 {
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1.1;
+}
+
+.admin-brand-content h1 span {
+  color: #c9a77d;
+}
+
+.admin-brand-content p {
+  max-width: 420px;
+  color: #c6bfba;
+  line-height: 1.8;
+}
+
+.admin-brand-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #c6bfba;
+  font-size: 11px;
+}
+
+.admin-login-section {
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 470px;
+  padding: 40px;
+  border: 1px solid #e4dbd0;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 20px 60px #29232b12;
+}
+
+.login-heading h2 {
+  margin: 15px 0 10px;
+  font-size: 34px;
+}
+
+.login-heading p {
+  color: #817780;
+  line-height: 1.6;
+}
+
+.login-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 25px;
+  border-radius: 14px;
+  background: #eee5d9;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+}
+
+.admin-login-form {
+  margin-top: 30px;
+}
+
+.login-field {
+  margin-bottom: 22px;
+}
+
+.login-field label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.login-field input {
+  width: 100%;
+  min-height: 50px;
+  padding: 14px;
+  border: 1px solid #ded6cf;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  color: #29232b;
+  font-size: 14px;
+}
+
+.login-field input:focus {
+  border-color: #a18461;
+  box-shadow: 0 0 0 3px #a184611c;
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ded6cf;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.password-wrapper input {
+  border: none;
+  box-shadow: none;
+}
+
+.password-toggle {
+  align-self: stretch;
+  padding: 0 12px;
+  border: none;
+  background: white;
+  color: #806546;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.admin-login-button {
+  width: 100%;
+  min-height: 54px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 9px;
+  background: #29232b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.admin-login-button:hover {
+  background: #806546;
+}
+
+.login-error {
+  margin-bottom: 18px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff0ee;
+  color: #b42318;
+  font-size: 13px;
+}
+
+.seller-register-box {
+  margin-top: 28px;
+  padding: 20px;
+  border: 1px solid #e9e1d8;
+  border-radius: 12px;
+  background: #faf7f3;
+}
+
+.seller-register-box span {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.seller-register-box strong {
+  font-size: 13px;
+}
+
+.seller-register-box a {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17px;
+  color: #806546;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.login-security {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 25px;
+  color: #817780;
+  font-size: 12px;
+}
+
+.security-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #579765;
+}
+
+@media (max-width: 800px) {
+  .admin-login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-login-brand {
+    min-height: auto;
+    padding: 30px;
+    gap: 35px;
+  }
+
+  .admin-brand-content h1 {
+    font-size: 48px;
+  }
+
+  .admin-login-section {
+    min-height: auto;
+    padding: 25px 16px;
+  }
+
+  .admin-login-card {
+    padding: 28px 22px;
+  }
+}

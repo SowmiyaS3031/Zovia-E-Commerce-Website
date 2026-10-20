@@ -1,0 +1,578 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   ZOVIA SELLER REGISTER
+======================================== */
+
+.seller-register-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background: #f6f3ee;
+  color: #28242a;
+}
+
+/* ========================================
+   LEFT BRAND PANEL
+======================================== */
+
+.seller-register-brand {
+  position: relative;
+  min-height: 100vh;
+  padding: 42px 52px;
+  background: #211d24;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.seller-register-brand::before {
+  content: "";
+  position: absolute;
+  width: 540px;
+  height: 540px;
+  border-radius: 50%;
+  background: rgba(198, 166, 125, 0.11);
+  top: -260px;
+  right: -220px;
+}
+
+.seller-register-brand::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.035);
+  bottom: -220px;
+  left: -190px;
+}
+
+/* Logo */
+
+.seller-register-logo {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 8px;
+}
+
+/* ========================================
+   BRAND CONTENT
+======================================== */
+
+.seller-brand-content {
+  position: relative;
+  z-index: 2;
+  max-width: 470px;
+  margin-top: -30px;
+}
+
+.seller-brand-eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #c7a77a;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.seller-brand-content h1 {
+  margin: 0;
+  font-size: clamp(58px, 6vw, 88px);
+  line-height: 0.92;
+  letter-spacing: -4px;
+  font-weight: 800;
+}
+
+.seller-brand-content h1 span {
+  color: #c7a77a;
+}
+
+.seller-brand-content p {
+  max-width: 400px;
+  margin-top: 30px;
+  color: #c7c2c7;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   BRAND POINTS
+======================================== */
+
+.seller-brand-points {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.seller-brand-points div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.seller-brand-points span {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(199, 167, 122, 0.45);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c7a77a;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.seller-brand-points p {
+  margin: 0;
+  color: #b4afb4;
+  font-size: 12px;
+}
+
+/* ========================================
+   RIGHT SECTION
+======================================== */
+
+.seller-register-section {
+  min-height: 100vh;
+  padding: 50px 70px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.seller-register-card {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ========================================
+   HEADING
+======================================== */
+
+.seller-register-heading {
+  margin-bottom: 34px;
+}
+
+.back-login {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #827b82;
+  text-decoration: none;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  transition: 0.2s ease;
+}
+
+.back-login:hover {
+  color: #252229;
+  transform: translateX(-3px);
+}
+
+.seller-register-eyebrow {
+  display: block;
+  margin-bottom: 9px;
+  color: #a18461;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.seller-register-heading h2 {
+  margin: 0;
+  color: #28242a;
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.seller-register-heading p {
+  margin: 12px 0 0;
+  color: #797279;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   FORM
+======================================== */
+
+.seller-register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+/* Section title */
+
+.form-section-title {
+  margin-top: 10px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #ddd7cf;
+  color: #9a7955;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* Grid */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px;
+}
+
+/* ========================================
+   FIELD
+======================================== */
+
+.seller-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.seller-field label {
+  color: #514b52;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.seller-field input,
+.seller-field select,
+.seller-field textarea {
+  width: 100%;
+  border: 1px solid #dcd5cc;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #29252b;
+  font-family: inherit;
+  font-size: 13px;
+  transition: 0.25s ease;
+}
+
+.seller-field input,
+.seller-field select {
+  height: 53px;
+  padding: 0 15px;
+}
+
+.seller-field textarea {
+  min-height: 95px;
+  padding: 15px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.seller-field input::placeholder,
+.seller-field textarea::placeholder {
+  color: #aaa4aa;
+}
+
+.seller-field input:focus,
+.seller-field select:focus,
+.seller-field textarea:focus {
+  border-color: #a18461;
+  box-shadow: 0 0 0 4px rgba(161, 132, 97, 0.09);
+}
+
+/* Select */
+
+.seller-field select {
+  cursor: pointer;
+}
+
+/* ========================================
+   PASSWORD
+======================================== */
+
+.seller-password-wrapper {
+  position: relative;
+}
+
+.seller-password-wrapper input {
+  padding-right: 68px;
+}
+
+.seller-password-wrapper button {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #957653;
+  cursor: pointer;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.seller-password-wrapper button:hover {
+  color: #28242a;
+}
+
+/* ========================================
+   ERROR
+======================================== */
+
+.seller-form-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid #e5bebe;
+  border-radius: 9px;
+  background: #fff3f3;
+  color: #a33b3b;
+  font-size: 12px;
+}
+
+.seller-form-error span {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #a33b3b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* ========================================
+   SUCCESS
+======================================== */
+
+.seller-form-success {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #bfd7bd;
+  border-radius: 10px;
+  background: #f2faf1;
+  color: #3f693c;
+}
+
+.seller-form-success > span {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #60925b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.seller-form-success strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.seller-form-success p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ========================================
+   REGISTER BUTTON
+======================================== */
+
+.seller-register-button {
+  width: 100%;
+  height: 58px;
+  margin-top: 5px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 10px;
+  background: #28242a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.seller-register-button span {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.seller-register-button strong {
+  font-size: 21px;
+  font-weight: 400;
+  transition: 0.25s ease;
+}
+
+.seller-register-button:hover {
+  background: #a18461;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(40, 36, 42, 0.14);
+}
+
+.seller-register-button:hover strong {
+  transform: translateX(5px);
+}
+
+/* ========================================
+   LOGIN FOOTER
+======================================== */
+
+.seller-login-footer {
+  margin-top: 25px;
+  text-align: center;
+  color: #918b91;
+  font-size: 11px;
+}
+
+.seller-login-footer a {
+  margin-left: 5px;
+  color: #8c6d49;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.seller-login-footer a:hover {
+  color: #28242a;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+  .seller-register-page {
+    grid-template-columns: 38% 62%;
+  }
+
+  .seller-register-brand {
+    padding: 35px;
+  }
+
+  .seller-register-section {
+    padding: 40px;
+  }
+
+  .seller-brand-content h1 {
+    font-size: 58px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 780px) {
+  .seller-register-page {
+    display: block;
+  }
+
+  .seller-register-brand {
+    min-height: auto;
+    padding: 28px 25px;
+  }
+
+  .seller-brand-content {
+    margin: 65px 0 35px;
+  }
+
+  .seller-brand-content h1 {
+    font-size: 54px;
+  }
+
+  .seller-brand-content p {
+    margin-top: 22px;
+    font-size: 14px;
+  }
+
+  .seller-brand-points {
+    display: none;
+  }
+
+  .seller-register-section {
+    min-height: auto;
+    padding: 42px 25px 50px;
+  }
+
+  .seller-register-heading h2 {
+    font-size: 33px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 430px) {
+  .seller-register-brand {
+    padding: 25px 20px;
+  }
+
+  .seller-register-logo {
+    font-size: 25px;
+  }
+
+  .seller-brand-content {
+    margin: 55px 0 30px;
+  }
+
+  .seller-brand-content h1 {
+    font-size: 46px;
+    letter-spacing: -2px;
+  }
+
+  .seller-register-section {
+    padding: 35px 20px 45px;
+  }
+
+  .seller-register-heading {
+    margin-bottom: 28px;
+  }
+
+  .seller-register-heading h2 {
+    font-size: 29px;
+  }
+
+  .seller-field input,
+  .seller-field select {
+    height: 51px;
+  }
+
+  .seller-register-button {
+    height: 55px;
+  }
+}
